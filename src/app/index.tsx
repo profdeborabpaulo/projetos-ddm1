@@ -11,7 +11,7 @@ import { BottomTabInset, MaxContentWidth, Spacing } from '@/constants/theme';
 
 function getDevMenuHint() {
   if (Platform.OS === 'web') {
-    return <ThemedText type="small">usar o navegador para acesso a ferramentas</ThemedText>;
+    return <ThemedText type="small">use browser devtools</ThemedText>;
   }
   if (Device.isDevice) {
     return (
@@ -35,22 +35,22 @@ export default function HomeScreen() {
         <ThemedView style={styles.heroSection}>
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
-            Bem-vindo ao Expo
+            Sejam bem-vindos ao App Tarefas
           </ThemedText>
         </ThemedView>
 
         <ThemedText type="code" style={styles.code}>
-          INICIO
+          inicio
         </ThemedText>
 
         <ThemedView type="backgroundElement" style={styles.stepContainer}>
           <HintRow
-            title="Tente editar"
+            title="Teste a edição do projeto"
             hint={<ThemedText type="code">src/app/index.tsx</ThemedText>}
           />
-          <HintRow title="Dev tools" hint={getDevMenuHint()} />
+          <HintRow title="Ferramentas" hint={getDevMenuHint()} />
           <HintRow
-            title="Fresh start"
+            title="Reinicialização do projeto"
             hint={<ThemedText type="code">npm run reset-project</ThemedText>}
           />
         </ThemedView>
